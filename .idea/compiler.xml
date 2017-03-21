@@ -21,7 +21,7 @@
       <module name="univers-service" target="1.5" />
       <module name="univers-ui" target="1.5" />
       <module name="univers-utils" target="1.5" />
-      <module name="univers-web" target="1.5" />
+      <module name="univers-web" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
