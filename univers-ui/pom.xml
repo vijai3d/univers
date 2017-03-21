@@ -10,6 +10,20 @@
     <modelVersion>4.0.0</modelVersion>
     <packaging>jar</packaging>
     <artifactId>univers-ui</artifactId>
+    <!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
+<dependencies>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-context</artifactId>
+        <version>4.3.7.RELEASE</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/com.vaadin/vaadin-spring -->
+    <dependency>
+        <groupId>com.vaadin</groupId>
+        <artifactId>vaadin-spring</artifactId>
+        <version>1.2.0</version>
+    </dependency>
 
+</dependencies>
 
 </project>
