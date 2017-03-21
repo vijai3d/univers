@@ -3,6 +3,7 @@ package com.vijai.ui.commons;
 import com.vaadin.ui.Component;
 import com.vaadin.ui.Tree;
 import com.vaadin.ui.VerticalLayout;
+import com.vijai.utils.StringUtils;
 
 /**
  * Created by Victor on 21.03.2017.
@@ -23,20 +24,20 @@ private class UniversMenu extends VerticalLayout {
     public UniversMenu layout() {
         mainMenu.setWidth("100%");
         mainMenu.setHeightUndefined();
-        mainMenu.addItem("STUDENT");
-        mainMenu.addItem("UNIVERSITY");
-        mainMenu.expandItem("STUDENT");
-        mainMenu.expandItem("UNIVERSITY");
-        mainMenu.addItem("Add student");
-        mainMenu.addItem("Remove student");
-        mainMenu.setChildrenAllowed("Add student", false);
-        mainMenu.setChildrenAllowed("Remove student", false);
-        mainMenu.setParent("Add student", "STUDENT");
-        mainMenu.setParent("Remove student", "STUDENT");
+        mainMenu.addItem(StringUtils.MENU_STUDENT.getString());
+        mainMenu.addItem(StringUtils.MENU_UNIVERSITY.getString());
+        mainMenu.expandItem(StringUtils.MENU_STUDENT.getString());
+        mainMenu.expandItem(StringUtils.MENU_UNIVERSITY.getString());
+        mainMenu.addItem(StringUtils.MENU_ADD_STUDENT.getString());
+        mainMenu.addItem(StringUtils.MENU_REMOVE_STUDENT.getString());
+        mainMenu.setChildrenAllowed(StringUtils.MENU_ADD_STUDENT.getString(), false);
+        mainMenu.setChildrenAllowed(StringUtils.MENU_REMOVE_STUDENT.getString(), false);
+        mainMenu.setParent(StringUtils.MENU_ADD_STUDENT.getString(), StringUtils.MENU_STUDENT.getString());
+        mainMenu.setParent(StringUtils.MENU_REMOVE_STUDENT.getString(), StringUtils.MENU_STUDENT.getString());
 
-        mainMenu.addItem("Operations");
-        mainMenu.setChildrenAllowed("Operations", false);
-        mainMenu.setParent("Operations", "UNIVERSITY");
+        mainMenu.addItem(StringUtils.MENU_OPERATIONS.getString());
+        mainMenu.setChildrenAllowed(StringUtils.MENU_OPERATIONS.getString(), false);
+        mainMenu.setParent(StringUtils.MENU_OPERATIONS.getString(), StringUtils.MENU_UNIVERSITY.getString());
 
         addComponent(mainMenu);
         return this;
