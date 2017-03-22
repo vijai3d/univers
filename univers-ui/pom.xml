@@ -34,6 +34,11 @@
         <artifactId>guava</artifactId>
         <version>12.0</version>
     </dependency>
+    <dependency>
+        <groupId>com.vijai</groupId>
+        <artifactId>univers-model</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </dependency>
 
 </dependencies>
 

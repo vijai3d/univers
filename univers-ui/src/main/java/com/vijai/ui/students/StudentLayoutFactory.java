@@ -8,8 +8,8 @@ import com.vaadin.ui.Label;
 import com.vaadin.ui.TabSheet;
 import com.vaadin.ui.VerticalLayout;
 import com.vijai.ui.commons.UniversMainUi;
-import com.vijai.ui.university.UniversityLayoutFactory;
 import com.vijai.utils.StudentsStringUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  * Created by Victor on 22.03.2017.
@@ -18,6 +18,8 @@ import com.vijai.utils.StudentsStringUtils;
 public class StudentLayoutFactory extends VerticalLayout implements View {
 
     public static final String NAME = "addstudent";
+    @Autowired
+    private AddStudentMainLayoutFactory addStudentMainLayoutFactory;
 
     public void enter(ViewChangeListener.ViewChangeEvent viewChangeEvent) {
         removeAllComponents();
@@ -31,7 +33,7 @@ public class StudentLayoutFactory extends VerticalLayout implements View {
         tabSheet = new TabSheet();
         tabSheet.setWidth("100%");
 
-        Component addStudentMainTab = new Label("This is a add student component");
+        Component addStudentMainTab = addStudentMainLayoutFactory.createComponent();
         Component showStudentsTab = new Label("This will be show students Tab");
 
         tabSheet.addTab(addStudentMainTab, StudentsStringUtils.MAIN_MENU.getString());
