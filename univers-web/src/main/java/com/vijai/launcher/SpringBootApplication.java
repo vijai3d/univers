@@ -18,7 +18,7 @@ import javax.persistence.Entity;
 @EnableAutoConfiguration
 @ComponentScan({"com.vijai"})
 //@EnableJpaRepositories({"com.vijai"})
-//@EntityScan({"com.vijai"})
+@EntityScan({"com.vijai"})
 public class SpringBootApplication extends SpringBootServletInitializer {
 
     @Override
